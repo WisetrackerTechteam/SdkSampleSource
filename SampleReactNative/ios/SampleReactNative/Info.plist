@@ -21,7 +21,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true/>
+	<true/> 
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -51,5 +51,26 @@
 	<false/>
   <key>UIStatusBarStyle</key>
   <string>UIStatusBarStyleDefault</string>
+
+    
+	<key>dotAuthorizationKey</key>
+	<dict>
+		<key>serviceNumber</key>
+		<string>102</string>
+		<key>expireDate</key>
+		<string>14</string>
+		<key>isDebug</key>
+		<string>true</string>
+		<key>isInstallRetention</key>
+		<string>true</string>
+		<key>isFingerPrint</key>
+		<string>true</string>
+		<key>accessToken</key>
+		<string></string>
+		<key>useMode</key>
+		<string>2</string>
+	</dict>
+
+
 </dict>
 </plist>

@@ -46,4 +46,7 @@ target 'SampleReactNative' do
     end
   end
 
+  # Wisetracker SDK add
+  pod 'RW', '~> 1.1.25'
+  
 end

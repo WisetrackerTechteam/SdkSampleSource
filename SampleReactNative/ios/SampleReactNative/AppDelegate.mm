@@ -1,11 +1,11 @@
 #import "AppDelegate.h"
 
+#import <DOT/DOT.h>
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <React/RCTLinkingManager.h>
 #import <React/RCTConvert.h>
-
 #import <React/RCTAppSetupUtils.h>
 
 #if RCT_NEW_ARCH_ENABLED
@@ -15,8 +15,8 @@
 #import <React/RCTSurfacePresenter.h>
 #import <React/RCTSurfacePresenterBridgeAdapter.h>
 #import <ReactCommon/RCTTurboModuleManager.h>
-
 #import <react/config/ReactNativeConfig.h>
+
 
 @interface AppDelegate () <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate> {
   RCTTurboModuleManager *_turboModuleManager;
@@ -53,6 +53,18 @@
   [self.window makeKeyAndVisible];
 
   [super application:application didFinishLaunchingWithOptions:launchOptions];
+
+
+  // #############################################################
+  // S: Wisetracker SDK init  
+  [DOT initialization:launchOptions application:application];
+  #ifdef DEBUG
+  [DOT checkDebugMode:true];
+  #else
+  [DOT checkDebugMode:false];
+  #endif
+  // E: Wisetracker SDK init 
+  // #############################################################
 
   return YES;
 }

@@ -14,6 +14,7 @@
 		96905EF65AED1B983A6B3ABC /* libPods-SampleReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-SampleReactNative.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		FEB4D984286ED194001D0553 /* DotReactBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB4D983286ED194001D0553 /* DotReactBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,11 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SampleReactNative/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		FE7E973B286EB4320020B853 /* CouchbaseLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CouchbaseLite.xcframework; path = Pods/CouchbaseLite/CouchbaseLite.xcframework; sourceTree = "<group>"; };
+		FE7E973C286EB4320020B853 /* DOT.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DOT.xcframework; path = Pods/RW/DOT.xcframework; sourceTree = "<group>"; };
+		FE7E973D286EB4320020B853 /* DOTSession.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DOTSession.xcframework; path = Pods/RW/DOTSession.xcframework; sourceTree = "<group>"; };
+		FEB4D982286ED194001D0553 /* DotReactBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotReactBridge.h; path = ../node_modules/DotReactNativeBridge/ios/DotReactBridge.h; sourceTree = "<group>"; };
+		FEB4D983286ED194001D0553 /* DotReactBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DotReactBridge.m; path = ../node_modules/DotReactNativeBridge/ios/DotReactBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE7E973B286EB4320020B853 /* CouchbaseLite.xcframework */,
+				FE7E973C286EB4320020B853 /* DOT.xcframework */,
+				FE7E973D286EB4320020B853 /* DOTSession.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				58EEBF8E8E6FB1BC6CAF49B5 /* libPods-SampleReactNative.a */,
 			);
@@ -79,6 +88,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				FEB4D982286ED194001D0553 /* DotReactBridge.h */,
+				FEB4D983286ED194001D0553 /* DotReactBridge.m */,
 				13B07FAE1A68108700A75B9A /* SampleReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -147,6 +158,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
+				B1C299C6963F409056D2DD11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,16 +258,44 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SampleReactNative/Pods-SampleReactNative-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
+				"${PODS_ROOT}/RW/dop-native-sdk-inf.js",
+				"${PODS_ROOT}/RW/NotificationViewController.swift",
+				"${PODS_ROOT}/RW/Base.lproj",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/dop-native-sdk-inf.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotificationViewController.swift",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Base.lproj",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleReactNative/Pods-SampleReactNative-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C299C6963F409056D2DD11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleReactNative/Pods-SampleReactNative-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/CouchbaseLite/CouchbaseLite.framework/CouchbaseLite",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RW/DOT.framework/DOT",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RW/DOTSession.framework/DOTSession",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CouchbaseLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DOT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DOTSession.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleReactNative/Pods-SampleReactNative-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -286,6 +326,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				FEB4D984286ED194001D0553 /* DotReactBridge.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
