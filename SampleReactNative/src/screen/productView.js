@@ -13,7 +13,7 @@ const ProductDetail = () => {
 					onPress={()=>{
 						 alert('장바구니 담기 이벤트 데이터가 서버로 전송되었습니다.');
 					}}	
-			/><br/>  
+			/>
 
 		</View>
 	);

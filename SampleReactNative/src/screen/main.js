@@ -13,14 +13,14 @@ const MainScreen = () => {
 					onPress={()=>{
 						 alert('회원가입 이벤트 데이터가 서버로 전송되었습니다.');
 					}}	
-			/><br/> 
+			/> 
 
 			<Button title="로그인 이벤트" 
 					style={styles.actionBtn} 
 					onPress={()=>{
 						 alert('로그인 이벤트 데이터가 서버로 전송되었습니다.');
 					}}	
-			/><br/> 
+			/> 
 
 			<Button title="상품 상세 페이지 이동" 
 					style={styles.actionBtn} 
@@ -28,7 +28,7 @@ const MainScreen = () => {
 	                    screen: 'ProductDetail',
 	                    info: 'information'
 	                })}
-			/><br/>  
+			/>  
 
  			<Button title="결제 완료 페이지 이동" 
 					style={styles.actionBtn} 
@@ -36,7 +36,7 @@ const MainScreen = () => {
 	                    screen: 'OrderCompleted',
 	                    info: 'information'
 	                })}
-			/><br/>  
+			/>  
 
 
  			<Button title="이벤트 페이지 이동" 
@@ -45,7 +45,7 @@ const MainScreen = () => {
 	                    screen: 'EventPage',
 	                    info: 'information'
 	                })}
-			/><br/> 
+			/> 
 
 		</View>
 	);
