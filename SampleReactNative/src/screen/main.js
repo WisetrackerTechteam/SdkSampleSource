@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { styles } from '../css/css';
-import { NavigationService } from '../common'; 
-import { useIsFocused } from '@react-navigation/native';
+import { NavigationService } from '../common';  
+import { withNavigationFocus } from 'react-navigation';
 
 // WiseTracker SDK Bridge Module Access
 import { NativeModules } from 'react-native';
  
-const MainScreen = () => {   
- 
-	if( NativeModules.DotReactBridge != null )	{  
-		NativeModules.DotReactBridge.logScreen(JSON.stringify({
-			page_id : "main.js"
-		}));
-	} 
+const MainScreen = ({navigation}) => {    
 
+
+ 	// 앱 실행후 메인 화면 처음 노출 될때, onStartPage 호출. 
+ 	useEffect(()=>{
+ 	 	if( navigation.isFocused()){
+ 	 	 	  if( NativeModules.DotReactBridge != null ) { 
+					NativeModules.DotReactBridge.onStartPage();
+ 	 	 	  }
+ 	 	} 
+ 	},[]); 
+
+ 	// 현재 화면의 페이지 정보 설정. 
+ 	useEffect(()=>{
+ 	 	if( navigation.isFocused()){
+ 	 		// 화면이 노출될때 현재 화면에 대한 page_id 설정 
+			if( NativeModules.DotReactBridge != null )	{  
+				NativeModules.DotReactBridge.logScreen(JSON.stringify({
+					page_id : "main.js"
+				}));
+			} 		
+ 		} 
+	}); 
+	
  	return (
 		<View style={styles.container}>
 			<Text style={styles.appTitle}>메인 화면을 보고 있습니다.</Text> 
@@ -77,5 +93,6 @@ const MainScreen = () => {
 
 		</View>
 	);
-};  
-export default  MainScreen;
+};   
+export default withNavigationFocus(MainScreen);
+
