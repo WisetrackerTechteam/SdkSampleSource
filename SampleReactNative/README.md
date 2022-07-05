@@ -6,6 +6,9 @@ npm install --save git+https://github.com/WisetrackerTechteam/RW-react-package.g
 
 # Android 
 
+
+
+
 # IOS
 
 - dotAuthorizationKey 키 추가. 
@@ -42,4 +45,7 @@ pod install --repo-update
 
 
 - Xcode 로 ios 프로젝트를 열고, DotReactBridge 객체를 프로젝트에 추가. 
+
+- 그리고 컴파일 해야 sdk 호출이 가능해짐. 
+
 

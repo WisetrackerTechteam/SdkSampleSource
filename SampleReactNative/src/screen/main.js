@@ -8,7 +8,7 @@ import { withNavigationFocus } from 'react-navigation';
 import { NativeModules } from 'react-native';
  
 const MainScreen = ({navigation}) => {    
-
+ 
 
  	// 앱 실행후 메인 화면 처음 노출 될때, onStartPage 호출. 
  	useEffect(()=>{
@@ -52,11 +52,12 @@ const MainScreen = ({navigation}) => {
 					style={styles.actionBtn} 
 					onPress={()=>{
 						if( NativeModules.DotReactBridge != null )	{ 
-							NativeModules.DotReactBridge.setUser({
+							NativeModules.DotReactBridge.setUser(JSON.stringify({
+								mbr:"Y",
 								sx : "male",
 								ag : "20-29",
 								ut1 : "platinum" 
-							}); 
+							})); 
 							NativeModules.DotReactBridge.logEvent(JSON.stringify({
 								event : "w_login_complete",
 								signupTp : "kakao"

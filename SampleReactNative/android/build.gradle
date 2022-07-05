@@ -55,5 +55,9 @@ allprojects {
             }
         }
         maven { url 'https://www.jitpack.io' }
+
+        /* sdk repository url 추가 */
+        maven { url 'https://wisetracker.jfrog.io/artifactory/wisetracker-gradle-release-local' }
+
     }
 }
