@@ -7,8 +7,6 @@ import 'dart:developer';
 // 메인 화면 
 class MainScreen extends StatelessWidget {
 
- 
-
   @override
   Widget build(BuildContext context) { 
     return Scaffold(
