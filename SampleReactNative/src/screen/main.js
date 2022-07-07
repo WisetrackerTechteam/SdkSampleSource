@@ -60,7 +60,7 @@ const MainScreen = ({navigation}) => {
 							})); 
 							NativeModules.DotReactBridge.logEvent(JSON.stringify({
 								event : "w_login_complete",
-								signupTp : "kakao"
+								loginTp : "kakao"
 							}));
 							alert('로그인 이벤트 데이터가 서버로 전송되었습니다.');
 						} 

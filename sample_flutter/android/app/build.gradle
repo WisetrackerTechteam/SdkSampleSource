@@ -51,6 +51,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        minSdkVersion 19
     }
 
     buildTypes {
@@ -68,4 +69,9 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // V2
+    implementation "com.sdk.wisetracker:base_module:latest.integration"
+    implementation "com.sdk.wisetracker:new_dot_module:latest.integration"
+
 }

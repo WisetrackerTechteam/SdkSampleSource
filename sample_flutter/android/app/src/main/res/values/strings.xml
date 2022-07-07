@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">sampleflutter</string>
+    <string-array name="dotAuthorizationKey">
+        <item name="useMode">1</item>
+        <item name="serviceNumber">102</item>
+        <item name="expireDate">14</item>
+        <item name="isDebug">false</item>
+        <item name="isInstallRetention">true</item>
+        <item name="isFingerPrint">true</item>
+        <item name="accessToken"></item>
+    </string-array>
+
+</resources>

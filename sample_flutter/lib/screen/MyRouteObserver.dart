@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/navigator.dart';
+import 'package:dot_sdk/dot_sdk.dart';
 
 class MyRouteObserver extends RouteObserver<PageRoute<dynamic>> {
   
 
   void _sendScreenView(PageRoute<dynamic> route) {
     var screenName = route.settings.name;
-    
-    print('screenName onStartPage  $screenName');
-    // do something with it, ie. send it to your analytics service collector
+     
+    // 화면 전환 시점에 onStartPage 함수 호출.  
+    DOT.onStartPage();
+    print('DOT.onStartPage() Called  $screenName');
+     
   }
 
   @override
