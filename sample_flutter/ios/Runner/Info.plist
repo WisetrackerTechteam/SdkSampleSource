@@ -45,5 +45,30 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    
+    <key>dotAuthorizationKey</key>
+    <dict>
+        <key>serviceNumber</key>
+        <string>102</string>
+        <key>expireDate</key>
+        <string>14</string>
+        <key>isDebug</key>
+        <string>true</string>
+        <key>isInstallRetention</key>
+        <string>true</string>
+        <key>isFingerPrint</key>
+        <string>true</string>
+        <key>accessToken</key>
+        <string></string>
+        <key>useMode</key>
+        <string>2</string>
+    </dict>
+    
 </dict>
 </plist>
