@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dot_sdk/dot_sdk.dart';
+import 'package:dot_flutter/dot_flutter.dart';
 
 
 // 구매 완료  화면 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'showDialogFunc.dart';
 import 'dart:developer';
-import 'package:dot_sdk/dot_sdk.dart';
+import 'package:dot_flutter/dot_flutter.dart';
 
 
 // 메인 화면 
