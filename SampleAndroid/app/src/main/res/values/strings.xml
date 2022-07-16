@@ -1,0 +1,31 @@
+<resources>
+  <string name="app_name">SDK Sample</string>
+  <string name="action_settings">Empty menu</string>
+
+  <string-array name="dotAuthorizationKey">
+    <item name="useMode">1</item>
+    <item name="serviceNumber">20027</item>
+    <item name="expireDate">14</item>
+    <item name="isDebug">false</item>
+    <item name="isInstallRetention">true</item>
+    <item name="isFingerPrint">true</item>
+    <item name="accessToken"></item>
+  </string-array>
+
+  <!-- Strings used for fragments for navigation -->
+  <string name="label_main">Main page</string>
+  <string name="text_product">This page is product details page.</string>
+  <string name="label_product">Product details page</string>
+  <string name="text_purchase">This page is purchase completed page.</string>
+  <string name="label_login">Login event</string>
+  <string name="label_webview">WebView page</string>
+
+  <string name="text_main">This page is main page.</string>
+  <string name="label_signup">Signup event</string>
+  <string name="label_purchase">Purchase completed page</string>
+  <string name="label_event">Event page</string>
+  <string name="text_event">This page is event page.</string>
+  <string name="label_adid">ADID page</string>
+  <string name="text_adid">This page is ADID page.</string>
+  <string name="label_cart">Add to cart event</string>
+</resources>

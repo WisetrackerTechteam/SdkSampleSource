@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">SDK 샘플</string>
+  <string name="action_settings">비어있는 메뉴</string>
+  <string name="label_main">메인 페이지</string>
+  <string name="text_product">상품상세 페이지입니다.</string>
+  <string name="label_product">상품 상세 페이지</string>
+  <string name="text_purchase">결제완료 페이지입니다.</string>
+  <string name="label_login">로그인 이벤트</string>
+  <string name="label_webview">웹뷰 페이지</string>
+  <string name="text_main">메인 페이지입니다.</string>
+  <string name="label_signup">회원가입 이벤트</string>
+  <string name="label_purchase">결제완료 페이지</string>
+  <string name="label_event">이벤트 페이지</string>
+  <string name="text_event">이벤트 페이지입니다.</string>
+  <string name="label_adid">ADID 페이지</string>
+  <string name="text_adid">ADID 페이지입니다.</string>
+  <string name="label_cart">장바구니 담기 이벤트</string>
+</resources>

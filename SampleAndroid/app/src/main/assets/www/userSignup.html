@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wisetracker's sample app">
+  <meta name="author" content="Green">
+  <meta property="og:title" content="Wisetracker's sample app">
+  <meta property="og:type" content="webapp">
+  <meta property="og:url" content="file:///assets/www/main.html">
+  <meta property="og:description" content="Wisetracker's sample app">
+  <title>Wisetracker's sample app</title>
+  <style type="text/css" lang="stylesheet">
+    body {font-family: sans-serif; margin: 0; padding: 1em;}
+  </style>
+</head>
+
+<body>
+<!-- your content here... -->
+<center>
+  <h1>회원가입</h1>
+  <p>
+    <a href="./main.html">Go to main.html</a>
+  </p>
+</center>
+<p>
+  <ul>
+    <li>Event: w_signup_complete</li>
+    <li>signupTp: NORMAL</li>
+  </ul>
+</p>
+<script type="wisetracker/text" id="wiseTracker2">
+    var event = new Object();
+    event["event"] = "w_signup_complete";
+    event["signupTp"] = "NORMAL";
+    if (typeof DOT != 'undefined') {
+        DOT.logEvent(event);
+    }
+</script>
+</body>
+</html>

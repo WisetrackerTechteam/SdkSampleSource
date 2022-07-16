@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+  <fragment
+      android:id="@+id/MainFragment"
+      android:name="kr.co.wisetracker.sdksample.MainFragment"
+      android:label="@string/label_main"
+      tools:layout="@layout/fragment_main">
+
+    <action
+        android:id="@+id/action_MainFragment_to_ProductFragment"
+        app:destination="@id/ProductFragment" />
+    <action
+        android:id="@+id/action_MainFragment_to_PurchaseFragment"
+        app:destination="@id/PurchaseFragment" />
+    <action
+        android:id="@+id/action_MainFragment_to_EventFragment"
+        app:destination="@id/EventFragment" />
+    <action
+        android:id="@+id/action_MainFragment_to_WebviewFragment"
+        app:destination="@id/WebviewFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/ProductFragment"
+      android:name="kr.co.wisetracker.sdksample.ProductFragment"
+      android:label="@string/label_product"
+      tools:layout="@layout/fragment_product" >
+    <action
+        android:id="@+id/action_ProductFragment_to_MainFragment"
+        app:destination="@id/MainFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/PurchaseFragment"
+      android:name="kr.co.wisetracker.sdksample.PurchaseFragment"
+      android:label="@string/label_purchase"
+      tools:layout="@layout/fragment_purchase" >
+    <action
+        android:id="@+id/action_PurchaseFragment_to_MainFragment"
+        app:destination="@id/MainFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/EventFragment"
+      android:name="kr.co.wisetracker.sdksample.EventFragment"
+      android:label="@string/label_event"
+      tools:layout="@layout/fragment_event">
+
+    <action
+        android:id="@+id/action_EventFragment_to_MainFragment"
+        app:destination="@id/MainFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/WebviewFragment"
+      android:name="kr.co.wisetracker.sdksample.WebviewFragment"
+      android:label="@string/label_webview"
+      tools:layout="@layout/fragment_webview">
+
+    <action
+        android:id="@+id/action_WebviewFragment_to_MainFragment"
+        app:destination="@id/MainFragment" />
+  </fragment>
+
+</navigation>
