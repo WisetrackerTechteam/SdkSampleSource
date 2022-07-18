@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wisetracker's sample app">
+  <meta name="author" content="Green">
+  <meta property="og:title" content="Wisetracker's sample app">
+  <meta property="og:type" content="webapp">
+  <meta property="og:url" content="file:///assets/www/main.html">
+  <meta property="og:description" content="Wisetracker's sample app">
+  <title>Wisetracker's sample app</title>
+  <style type="text/css" lang="stylesheet">
+    body {font-family: sans-serif; margin: 0; padding: 1em;}
+  </style>
+</head>
+
+<body>
+<!-- your content here... -->
+<center>
+  <h1>상품구매</h1>
+  <p>
+    <a href="./main.html">Go to main.html</a>
+  </p>
+</center>
+<p>
+  <ul>
+    <li>Event: purchase</li>
+    <li>product_id: PR001</li>
+    <li>product_name: 구매완료 상품명</li>
+    <li>quantity: 1</li>
+    <li>revenue: 100</li>
+    <li id="desc"></li>
+  </ul>
+</p>
+<script type="javascript/text">
+</script>
+<script type="wisetracker/text" id="wiseTracker2">
+  function pad2(n) { return n < 10 ? '0' + n : n }
+  var purchase = new Object();
+  var date = new Date();
+  purchase["transaction_id"] = date.getFullYear().toString()
+    + pad2(date.getMonth() + 1)
+    + pad2(date.getDate())
+    + pad2(date.getHours())
+    + pad2(date.getMinutes())
+    + pad2(date.getSeconds())
+    + '.' + date.getMilliseconds();
+  purchase["currency"] = "KRW";
+  var productArray = new Array();
+
+  // <!-- 반복(loop)을 수행하는 구문 시작점을 삽입하세요 -->
+  var product = new Object();
+  product["product_id"] = "PR001";
+  product["product_name"] = "구매완료 상품명";
+  product["quantity"] = 1;
+  product["revenue"] = 100;
+  productArray.push(product);
+  // <!-- 반복(loop)을 수행하는 구문 종료점 입니다 -->
+
+  purchase["product"] = productArray;
+
+  if (typeof DOT != 'undefined') {
+    DOT.logPurchase(purchase);
+    let desc = document.getElementById('desc');
+    desc.innerHTML = JSON.stringify(purchase);
+  }
+</script>
+</body>
+</html>
