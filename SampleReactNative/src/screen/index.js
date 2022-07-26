@@ -4,16 +4,19 @@ import MainScreen from './main';
 import ProductDetail from "./productView";
 import OrderCompleted from "./purchase";
 import EventPage from "./event";
+import DeeplinkScreen from "./deeplink";
+
 
 const AuthStack = createStackNavigator(
     { 
+        DeeplinkScreen: {screen: DeeplinkScreen},
         MainScreen: {screen: MainScreen},
         ProductDetail: {screen: ProductDetail},
         OrderCompleted: {screen: OrderCompleted},
         EventPage: {screen: EventPage}
     },
     {
-        initialRouteName: 'MainScreen'
+        initialRouteName: 'DeeplinkScreen'
     }
 );
 
@@ -25,7 +28,6 @@ const AppNavigator = createSwitchNavigator(
     {
         initialRouteName: 'Auth',
     }
-); 
+);   
 export default createAppContainer(AppNavigator);
-
-
+ 

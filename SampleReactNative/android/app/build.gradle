@@ -338,7 +338,7 @@ dependencies {
 
     // Wisetracker SDK
     implementation "com.sdk.wisetracker:base_module:1.0.70"
-    implementation "com.sdk.wisetracker:new_dot_module:1.0.36"
+    implementation "com.sdk.wisetracker:new_dot_module:1.0.38"
 
 }
 

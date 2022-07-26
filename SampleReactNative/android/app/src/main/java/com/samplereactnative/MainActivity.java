@@ -1,5 +1,6 @@
 package com.samplereactnative;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -18,8 +19,21 @@ public class MainActivity extends ReactActivity {
     setTheme(R.style.AppTheme);
     super.onCreate(null);
 
+    // SDK 초기화 
     DOT.initialization(this);
   }
+
+
+  /***
+   * Android deeplink 오픈 처리 
+  **/
+  @Override
+  public void onNewIntent(Intent intent) {
+      super.onNewIntent(intent);
+      DOT.setDeepLink(getApplicationContext(), getIntent());
+  } 
+
+
 
   /**
    * Returns the name of the main component registered from JavaScript.
