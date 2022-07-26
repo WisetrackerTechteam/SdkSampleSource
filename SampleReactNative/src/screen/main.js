@@ -7,6 +7,9 @@ import { withNavigationFocus } from 'react-navigation';
 // WiseTracker SDK Bridge Module Access
 import { NativeModules } from 'react-native';
  
+// deeplink 처리
+import {Linking} from 'react-native';
+
 const MainScreen = ({navigation}) => {    
  
 
@@ -15,8 +18,22 @@ const MainScreen = ({navigation}) => {
  	 	if( navigation.isFocused()){
  	 	 	  if( NativeModules.DotReactBridge != null ) { 
 					NativeModules.DotReactBridge.onStartPage();
- 	 	 	  }
+ 	 	 	  }  
  	 	} 
+
+ 	 	// 딥링크 추출 리스너 선언 
+		Linking.getInitialURL()                         // 최초 실행 시에 Universal link 또는 URL scheme요청이 있었을 때 여기서 찾을 수 있음 
+		    .then(value => { 
+		    redirectionScreen("getInitialURL", value); 
+		});
+
+		Linking.addEventListener('url', (e) => {       // 앱이 실행되어있는 상태에서 요청이 왔을 때 처리하는 이벤트 등록
+		    redirectionScreen("addEventListener", e.url);
+		}); 
+
+		return () => {
+			Linking.remove('url'); 
+		};  	 	 
  	},[]); 
 
  	// 현재 화면의 페이지 정보 설정. 
@@ -31,6 +48,28 @@ const MainScreen = ({navigation}) => {
  		} 
 	}); 
 	
+ 	// deeplink 처리 함수 
+	redirectionScreen = (fromCall, url) => {
+		console.log( fromCall, url );
+		// 딥링크가 없다면 메인 화면으로 이동 시킴. 		    	
+    	if( url == null || url == undefined || url === ""){
+    		NavigationService.navigate('MainScreen', {
+                screen: 'MainScreen',
+                info: 'information'
+            });
+    	}  
+    	else{
+    		// 딥링크가 있다면 url 을 parse 하여 이동할 페이지를 지정함. 
+    		// 아래의 예시는 상품 상세로 이동하는 처리를 하고 있음.   
+			NavigationService.navigate('ProductDetail', {
+                screen: 'ProductDetail',
+                info: 'information'
+            });
+    	}
+
+	};
+
+
  	return (
 		<View style={styles.container}>
 			<Text style={styles.appTitle}>메인 화면을 보고 있습니다.</Text> 
