@@ -33,7 +33,8 @@ const MainScreen = ({navigation}) => {
 
 		return () => {
 			Linking.remove('url'); 
-		};  	 	 
+		};  	
+
  	},[]); 
 
  	// 현재 화면의 페이지 정보 설정. 
@@ -65,8 +66,7 @@ const MainScreen = ({navigation}) => {
                 screen: 'ProductDetail',
                 info: 'information'
             });
-    	}
-
+    	} 
 	};
 
 

@@ -14,14 +14,27 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>sdk.developers.wisetracker.co.kr</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>dopreact</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true/> 
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -41,6 +54,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -49,28 +64,22 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-  <key>UIStatusBarStyle</key>
-  <string>UIStatusBarStyleDefault</string>
-
-    
 	<key>dotAuthorizationKey</key>
 	<dict>
-		<key>serviceNumber</key>
-		<string>102</string>
+		<key>accessToken</key>
+		<string></string>
 		<key>expireDate</key>
 		<string>14</string>
 		<key>isDebug</key>
 		<string>true</string>
-		<key>isInstallRetention</key>
-		<string>true</string>
 		<key>isFingerPrint</key>
 		<string>true</string>
-		<key>accessToken</key>
-		<string></string>
+		<key>isInstallRetention</key>
+		<string>true</string>
+		<key>serviceNumber</key>
+		<string>102</string>
 		<key>useMode</key>
 		<string>2</string>
 	</dict>
-
-
 </dict>
 </plist>
