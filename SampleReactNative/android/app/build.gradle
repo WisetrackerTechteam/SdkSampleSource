@@ -141,7 +141,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "kr.co.wisetracker.sdksample"
+        applicationId "com.samplereactnative"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -337,11 +337,9 @@ dependencies {
     }
 
     // Wisetracker SDK
-    implementation "com.sdk.wisetracker:base_module:1.0.70"
-    implementation "com.sdk.wisetracker:new_dot_module:1.0.36"
-
-    implementation platform('com.google.firebase:firebase-bom:29.0.0')
-    implementation 'com.google.firebase:firebase-messaging'
+    implementation "com.sdk.wisetracker:base_module:latest.integration"
+    implementation "com.sdk.wisetracker:new_dot_module:latest.integration"
+    
 }
 
 if (isNewArchitectureEnabled()) {

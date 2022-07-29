@@ -30,6 +30,7 @@
 		7A4D352CD337FB3A3BF06240 /* Pods-SampleReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleReactNative.release.xcconfig"; path = "Target Support Files/Pods-SampleReactNative/Pods-SampleReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = SampleReactNative/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		E65B30FA2886401B00171BE7 /* SampleReactNative.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = SampleReactNative.entitlements; path = SampleReactNative/SampleReactNative.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SampleReactNative/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		FE7E973B286EB4320020B853 /* CouchbaseLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CouchbaseLite.xcframework; path = Pods/CouchbaseLite/CouchbaseLite.xcframework; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		13B07FAE1A68108700A75B9A /* SampleReactNative */ = {
 			isa = PBXGroup;
 			children = (
+				E65B30FA2886401B00171BE7 /* SampleReactNative.entitlements */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -178,6 +180,7 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = P8KRZA7924;
 						LastSwiftMigration = 1250;
 					};
 				};
@@ -340,7 +343,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SampleReactNative/SampleReactNative.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8KRZA7924;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -355,7 +360,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.SampleReactNative;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.wisetracker.sdksample;
 				PRODUCT_NAME = SampleReactNative;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -369,7 +374,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SampleReactNative/SampleReactNative.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8KRZA7924;
 				INFOPLIST_FILE = SampleReactNative/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -379,7 +386,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.SampleReactNative;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.wisetracker.sdksample;
 				PRODUCT_NAME = SampleReactNative;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

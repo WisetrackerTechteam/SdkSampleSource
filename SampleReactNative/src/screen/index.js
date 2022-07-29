@@ -25,7 +25,6 @@ const AppNavigator = createSwitchNavigator(
     {
         initialRouteName: 'Auth',
     }
-); 
+);   
 export default createAppContainer(AppNavigator);
-
-
+ 

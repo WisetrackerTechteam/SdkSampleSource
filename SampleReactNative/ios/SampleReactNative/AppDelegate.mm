@@ -16,7 +16,7 @@
 #import <React/RCTSurfacePresenterBridgeAdapter.h>
 #import <ReactCommon/RCTTurboModuleManager.h>
 #import <react/config/ReactNativeConfig.h>
-
+ 
 
 @interface AppDelegate () <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate> {
   RCTTurboModuleManager *_turboModuleManager;
@@ -86,11 +86,27 @@
 
 // Linking API
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+  
+  /*
+   * Wisetracker Deeplink  분석을 위한 코드 
+   */
+  [DOT setDeepLink:url.absoluteString];
+  
   return [super application:application openURL:url options:options] || [RCTLinkingManager application:application openURL:url options:options];
 }
 
 // Universal Links
 - (BOOL)application:(UIApplication *)application continueUserActivity:(nonnull NSUserActivity *)userActivity restorationHandler:(nonnull void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
+  /*
+   * Wisetracker Universal link 분석을 위한 코드
+   */
+  if( userActivity.webpageURL != nil ){
+    NSString* uniLink = userActivity.webpageURL.absoluteString;
+    if( uniLink != nil && ![uniLink isEqualToString:@""]){
+      [DOT setDeepLink:uniLink];
+    }
+  }
+  
   BOOL result = [RCTLinkingManager application:application continueUserActivity:userActivity restorationHandler:restorationHandler];
   return [super application:application continueUserActivity:userActivity restorationHandler:restorationHandler] || result;
 }
