@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "669598627077",
+    "project_id": "sdksample-b530f",
+    "storage_bucket": "sdksample-b530f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669598627077:android:f28b577c1ba165c71b336c",
+        "android_client_info": {
+          "package_name": "kr.co.wisetracker.sdksample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669598627077-v6ka5o1s1fft7vgnnkdukikb86pm8d7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq_ZtEchsufUBbeRXd20j3q0vh_VWVlPc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669598627077-v6ka5o1s1fft7vgnnkdukikb86pm8d7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
