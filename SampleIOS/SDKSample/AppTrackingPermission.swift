@@ -40,7 +40,7 @@ class AppTrackingPermission {
     }
   }
   
-  func identifierForAdvertising() -> String? {
+  static func identifierForAdvertising() -> String? {
     // Get and return IDFA
     return ASIdentifierManager.shared().advertisingIdentifier.uuidString
   }

@@ -17,7 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    registerForRemoteNotifications()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+      AppTrackingPermission.requestAppTrackingPermission { (isSuccess: Bool, error: AppTrackingPermissionError?) -> () in
+        if (isSuccess) {
+          let idfa = AppTrackingPermission.identifierForAdvertising() ?? ""
+          self.logger.warning("IDFA 추적 허용 : IDFA = \(idfa)")
+          DOT.setIDFA(idfa)
+        }
+        else if (error == .restricted || error == .denied) {
+          self.logger.warning("IDFA 추적 불가")
+          DOT.denyATT()
+        }
+        self.registerForRemoteNotifications()
+      }
+    })
     
     return true
   }

@@ -9,6 +9,7 @@ import os
 import UIKit
 import DOT
 import AdSupport
+import AppTrackingTransparency
 import SnackBar_swift
 
 class MainViewController: UIViewController {
@@ -19,6 +20,9 @@ class MainViewController: UIViewController {
   
   // 로그인 이벤트를 최종 처리하기 위한 버튼
   @IBOutlet weak var buttonLogin: UIButton!
+  
+  // IDFA
+  var idfa: String = ""
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -31,32 +35,6 @@ class MainViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     logger.debug("call showAtt() on viewDidAppear()")
-    let _ = AppTrackingPermission.requestAppTrackingPermission{ success, error in
-      if success == true {
-        DispatchQueue.main.async {
-          let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-          self.logger.warning("User permit to track : IDFA : \(idfa)")
-          DOT.setIDFA(idfa)
-        }
-      } else {
-        if let status = error {
-          self.logger.warning("status: \(status.localizedDescription)")
-          if (status == .notDetermined) {
-            // 아직 결정하지 않음
-          }
-          else if (status == .denied) {
-            // 거부
-            DOT.denyATT()
-          }
-          else if (status == .restricted) {
-            // ?? 제한
-            DOT.denyATT()
-          }
-        } else {
-          self.logger.error("User does not permit to track: \(error.debugDescription)")
-        }
-      }
-    }
   }
   
   override func viewDidLoad() {
@@ -66,11 +44,18 @@ class MainViewController: UIViewController {
     
     // 회원 가입 이벤트 처리
     buttonSignup.addTarget(self, action: #selector(handleSignup(_:)), for: .touchUpInside)
-
+    
     // 로그인 이벤트 처리
     buttonLogin.addTarget(self, action: #selector(handleLogin(_:)), for: .touchUpInside)
+    
+    if #available(iOS 12, *) {
+      self.idfa = AppTrackingPermission.identifierForAdvertising() ?? ""
+    } else {
+      self.idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+    }
+    logger.debug("IDFA: \(self.idfa)")
   }
-
+  
   @objc
   private func handleSignup(_ sender: UIButton) {
     // 앱에서 회원가입이 완료되는 시점에 삽입하십시오
@@ -83,18 +68,18 @@ class MainViewController: UIViewController {
     
     logger.debug("회원가입했어요.")
   }
-
+  
   @objc
   private func handleLogin(_ sender: UIButton) {
     // 앱에서 로그인이 완료되는 시점에 삽입하십시오
     DOT.setUser(
-        User.builder({ (builder) in
-            let user = builder as! User
-            // 성별, 연령, 고객등급을 아래와 같은 key, value로 더 추가 가능합니다
-            user.gender = "male"
-            user.age = "20-29"
-            user.attribute1 = "platinum"
-        })
+      User.builder({ (builder) in
+        let user = builder as! User
+        // 성별, 연령, 고객등급을 아래와 같은 key, value로 더 추가 가능합니다
+        user.gender = "male"
+        user.age = "20-29"
+        user.attribute1 = "platinum"
+      })
     )
     let event = NSMutableDictionary()
     event["event"] = "w_login_complete"
@@ -102,7 +87,8 @@ class MainViewController: UIViewController {
     DOT.logEvent(event)
     
     SnackBar.make(in: self.view, message: "로그인했어요", duration: .lengthLong).show()
-
+    
     logger.debug("로그인했어요.")
   }
+  
 }

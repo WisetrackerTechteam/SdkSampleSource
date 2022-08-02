@@ -941,11 +941,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SDKSample/SDKSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = P8KRZA7924;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SDKSample/Info.plist;
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "사용자의 데이터는 사용자 특성에 맞는 경험을 제공해드리는데 사용됩니다.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data is used to provide you with optimized advertisements and is used as basic data to improve the performance of the app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -973,11 +973,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SDKSample/SDKSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = P8KRZA7924;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SDKSample/Info.plist;
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "사용자의 데이터는 사용자 특성에 맞는 경험을 제공해드리는데 사용됩니다.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data is used to provide you with optimized advertisements and is used as basic data to improve the performance of the app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
