@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-community/push-notification-ios": "^1.10.1",
     "@react-navigation/native": "^5.9.8",
     "DotReactNativeBridge": "github:WisetrackerTechteam/RW-react-package",
     "expo": "~45.0.0",
@@ -20,6 +21,7 @@
     "react-native": "0.68.2",
     "react-native-flash-message": "^0.2.1",
     "react-native-gesture-handler": "^2.5.0",
+    "react-native-push-notification": "^8.1.1",
     "react-native-reanimated": "^2.9.0",
     "react-native-safe-area-context": "^4.3.1",
     "react-native-screens": "^3.14.0",
