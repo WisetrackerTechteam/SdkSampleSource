@@ -67,8 +67,11 @@ public class DotReactBridge extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void setPushClick(Intent intent) {
+    public void setPushClick(String jsonString) {
         try {
+            Log.i(TAG, "jsonString: " + jsonString);
+            Intent intent = new Intent();
+            intent.putExtra("RW_push_payload_WP", jsonString);
             DOT.setPushClick(getReactApplicationContext(), intent);
         } catch (Exception e) {
             Log.e(TAG, "set push click error !!", e);

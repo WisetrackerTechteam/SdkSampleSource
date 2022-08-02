@@ -1,4 +1,4 @@
-package com.samplereactnative.newarchitecture.components;
+package kr.co.wisetracker.sdksample.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

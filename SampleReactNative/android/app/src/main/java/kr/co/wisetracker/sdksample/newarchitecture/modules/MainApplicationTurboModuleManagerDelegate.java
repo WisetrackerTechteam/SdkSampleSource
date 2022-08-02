@@ -1,4 +1,4 @@
-package com.samplereactnative.newarchitecture.modules;
+package kr.co.wisetracker.sdksample.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

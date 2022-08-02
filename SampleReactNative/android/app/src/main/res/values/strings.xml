@@ -2,7 +2,7 @@
     <string name="app_name">SampleReactNative</string>
     <string-array name="dotAuthorizationKey">
         <item name="useMode">1</item>
-        <item name="serviceNumber">102</item>
+        <item name="serviceNumber">20027</item>
         <item name="expireDate">14</item>
         <item name="isDebug">false</item>
         <item name="isInstallRetention">true</item>

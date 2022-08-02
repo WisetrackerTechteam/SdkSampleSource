@@ -1,4 +1,4 @@
-package com.samplereactnative.newarchitecture;
+package kr.co.wisetracker.sdksample.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.samplereactnative.BuildConfig;
-import com.samplereactnative.newarchitecture.components.MainComponentsRegistry;
-import com.samplereactnative.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import kr.co.wisetracker.sdksample.BuildConfig;
+import kr.co.wisetracker.sdksample.newarchitecture.components.MainComponentsRegistry;
+import kr.co.wisetracker.sdksample.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

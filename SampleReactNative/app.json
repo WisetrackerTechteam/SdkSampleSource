@@ -7,7 +7,7 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "org.name.SampleReactNative"
+      "bundleIdentifier": "kr.co.wisetracker.sdksample"
     }
   },
   "name": "SampleReactNative"

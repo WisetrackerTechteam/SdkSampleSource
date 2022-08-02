@@ -141,7 +141,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.samplereactnative"
+        applicationId "kr.co.wisetracker.sdksample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -339,7 +339,8 @@ dependencies {
     // Wisetracker SDK
     implementation "com.sdk.wisetracker:base_module:latest.integration"
     implementation "com.sdk.wisetracker:new_dot_module:latest.integration"
-    
+
+    implementation 'com.google.firebase:firebase-analytics:21.1.0'
 }
 
 if (isNewArchitectureEnabled()) {
@@ -372,5 +373,6 @@ def isNewArchitectureEnabled() {
     return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
 }
 
-
+// ADD THIS AT THE BOTTOM
+apply plugin: 'com.google.gms.google-services'
 
