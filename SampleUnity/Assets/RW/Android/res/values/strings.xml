@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">unity-aos-plugin</string>
+    <string-array name="dotAuthorizationKey">
+        <item name="useMode">1</item>
+        <item name="domain">https://trk.analytics.wisetracker.co.kr/</item>
+        <item name="serviceNumber">103</item>
+        <item name="expireDate">14</item>
+        <item name="isDebug">true</item>
+        <item name="isInstallRetention">true</item>
+        <item name="isFingerPrint">true</item>
+        <item name="accessToken"></item>
+    </string-array>
+    <string-array name="customKeyList" >
+    </string-array>
+    <string-array name="cookies" >
+    </string-array>
+</resources>
