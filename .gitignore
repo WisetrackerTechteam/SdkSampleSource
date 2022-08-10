@@ -44,6 +44,7 @@ work/
 /node_modules
 */node_modules
 */.expo/
+*/.next/
 /build
 package-lock.json
 gradlew
