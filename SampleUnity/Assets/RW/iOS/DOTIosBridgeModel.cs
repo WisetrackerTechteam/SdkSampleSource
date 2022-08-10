@@ -15,7 +15,7 @@ namespace DOTIosBridgeModel
         public string attr5;
         public string memberGrade;
         public string memberId;
-        public Boolean isLogin;
+        public string isLogin;
 
         public UserIos(User user)
         {

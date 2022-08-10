@@ -17,7 +17,7 @@ namespace DOT_Model
         private string attr5;
         private string memberGrade;
         private string memberId;
-        private Boolean isLogin;
+        private string isLogin;
 
         public string getMember()
         {
@@ -69,7 +69,7 @@ namespace DOT_Model
             return memberId;
         }
 
-        public Boolean getIsLogin()
+        public string getIsLogin()
         {
             return isLogin;
         }
@@ -102,7 +102,7 @@ namespace DOT_Model
             public string attr5;
             public string memberGrade;
             public string memberId;
-            public Boolean isLogin;
+            public string isLogin;
 
             public Builder setMember(string member)
             {
@@ -164,7 +164,7 @@ namespace DOT_Model
                 return this;
             }
 
-            public Builder setIsLogin(Boolean isLogin)
+            public Builder setIsLogin(string isLogin)
             {
                 this.isLogin = isLogin;
                 return this;
@@ -172,7 +172,7 @@ namespace DOT_Model
 
             public User build()
             {
-                this.isLogin = true;
+                this.isLogin = "Y";
                 return new User(this);
             }
 

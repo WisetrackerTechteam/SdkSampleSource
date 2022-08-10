@@ -1,8 +1,8 @@
 <dependencies>
   <packages>
-    <package>com.sdk.wisetracker:base_module:1.0.70</package>
-    <package>com.sdk.wisetracker:new_dot_module:1.0.38</package>
-    <package>com.sdk.wisetracker:onestore_installreferrer:1.0.4</package>
+    <package>com.sdk.wisetracker:base_module:latest.integration</package>
+    <package>com.sdk.wisetracker:new_dot_module:latest.integration</package>
+    <package>com.sdk.wisetracker:onestore_installreferrer:latest.integration</package>
   </packages>
   <files>
     <file>Assets/Plugins/Android/androidx.annotation.annotation-1.2.0.jar</file>

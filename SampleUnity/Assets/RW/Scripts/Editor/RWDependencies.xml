@@ -1,23 +1,23 @@
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.sdk.wisetracker:base_module:1.0.70">
+    <androidPackage spec="com.sdk.wisetracker:base_module:latest.integration">
         <repositories>
           <repository>https://wisetracker.jfrog.io/artifactory/wisetracker-gradle-release-local</repository>
         </repositories>
     </androidPackage>
-    <androidPackage spec="com.sdk.wisetracker:new_dot_module:1.0.38">
+    <androidPackage spec="com.sdk.wisetracker:new_dot_module:latest.integration">
       <repositories>
           <repository>https://wisetracker.jfrog.io/artifactory/wisetracker-gradle-release-local</repository>
         </repositories>
     </androidPackage>
-    <androidPackage spec="com.sdk.wisetracker:onestore_installreferrer:1.0.4">
+    <androidPackage spec="com.sdk.wisetracker:onestore_installreferrer:latest.integration">
       <repositories>
           <repository>https://wisetracker.jfrog.io/artifactory/wisetracker-gradle-release-local</repository>
         </repositories>
     </androidPackage>
   </androidPackages>  
   <iosPods> 
-    <iosPod name="RW" version="~> 1.1.26" bitcodeEnabled="true" minTargetSdk="6.0" addToAllTargets="false">
+    <iosPod name="RW" version="~> 1.1.26" bitcodeEnabled="true" minTargetSdk="9.3" addToAllTargets="false">
       <sources>
         <source>https://github.com/WisetrackerTechteam/RW-iOS-SDK</source>
       </sources>
