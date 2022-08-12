@@ -1,38 +1,20 @@
 import 'package:flutter/material.dart';
-import 'screen/mainScreen.dart';
-import 'screen/productScreen.dart';
-import 'screen/event.dart';
-import 'screen/purchase.dart';
-import 'screen/RouteHelper.dart';
-import 'screen/MyRouteObserver.dart';
-import 'dart:developer';
+import 'package:logger/logger.dart';
+import 'package:sample_flutter/MainApp.dart';
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
+var logger = Logger();
 
-  
 void main() {
-  runApp(NavigationModule());
+  runApp(const NavigationModule());
 }
 
-// NavigationService 
+// NavigationService
 class NavigationModule extends StatelessWidget {
+  const NavigationModule({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) { 
-    return MaterialApp( 
-      navigatorObservers: [MyRouteObserver()],
-      // initialRoute: '/',
-      routes: {
-        // '/': (context) => const MainScreen(),
-        '/productDetail': (context) => ProductDetailScreen(),
-        '/event': (context) =>  EventScreen(),
-        '/purchase': (context) =>  PurchaseScreen() 
-      }, 
-      home: MainScreen(),
-    );
+  Widget build(BuildContext context) {
+    return const MainApp();
   }
 }
- 
-
-
-
-

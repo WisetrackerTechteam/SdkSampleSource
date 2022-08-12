@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sample_flutter/main.dart';
 
 class RouteAwareWidget extends StatefulWidget {
   final String name;
   final Widget child;
 
-  RouteAwareWidget(this.name, {@required this.child});
+  RouteAwareWidget(this.name, {required this.child});
 
   @override
   State<RouteAwareWidget> createState() => RouteAwareWidgetState();
@@ -13,7 +14,7 @@ class RouteAwareWidgetState extends State<RouteAwareWidget> with RouteAware {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    routeObserver.subscribe(this, ModalRoute.of(context));
+    routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
   }
 
   @override
