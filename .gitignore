@@ -57,3 +57,6 @@ package-lock.json
 */macos/Pods/
 */.dart_tool/
 */ios/.symlinks/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
