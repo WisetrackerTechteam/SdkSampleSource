@@ -82,6 +82,15 @@ class MainScreen extends StatelessWidget {
                                       );
                                   },
                                   child: new Text('이벤트 페이지 이동'),
+                                ), 
+                                new RaisedButton(
+                                  onPressed: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        '/webviewScreen',
+                                      );
+                                  },
+                                  child: new Text('웹뷰 페이지로 이동'),
                                 ) 
                               ]      
                             ), 

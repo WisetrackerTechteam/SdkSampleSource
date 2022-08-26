@@ -11,6 +11,7 @@ import 'package:sample_flutter/screen/event.dart';
 import 'package:sample_flutter/screen/mainScreen.dart';
 import 'package:sample_flutter/screen/productScreen.dart';
 import 'package:sample_flutter/screen/purchase.dart';
+import 'package:sample_flutter/screen/webviewScreen.dart';
 import 'package:uni_links/uni_links.dart';
 
 //
@@ -116,7 +117,8 @@ class _MainAppState extends State<MainApp> {
       routes: {
         '/productDetail': (context) => ProductDetailScreen(),
         '/event': (context) => EventScreen(),
-        '/purchase': (context) => PurchaseScreen()
+        '/purchase': (context) => PurchaseScreen(),
+        '/webviewScreen': (context) => WebviewScreen()
       },
       home: MainScreen(),
     );

@@ -23,8 +23,7 @@ const WebviewPage = ({navigation}) => {
 			         		**/
 			         		NativeModules.DotReactBridge.onStartPage(); 
 						} 
-			         }}   
-
+			         }} 
 			         /***
 						웹뷰에서 로딩되는 웹 페이지에 적용된 분석 코드는 다음과 같은 형태로 작성 
 						window.ReactNativeWebView.postMessage(JSON.stringify({
@@ -33,7 +32,6 @@ const WebviewPage = ({navigation}) => {
 								event : "webview_event_fire", 
 							} 
 						})); 
-						
 						위의 함수 호출에 의한 메시지는 onMessage에서 수신 받게 됨.  
 						수신받은 데이터에서, method 이름에 따라 다음과 같이  NativeModules.DotReactBridge 객체로 데이터를 전달하도록 구현.  
 			         */
