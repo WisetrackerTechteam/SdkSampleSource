@@ -10,8 +10,14 @@ function setTopLevelNavigator(navigatorRef) {
 function navigate(routeName, params) {   
 
     // productView, event, purchase 화면으로 이동을 시작할때, onStartPage
+
     if( NativeModules.DotReactBridge != null ) { 
-            NativeModules.DotReactBridge.onStartPage();
+            /**
+             * 웹뷰는 자체적으로 page 가 로딩이 시작되는 시점에 onStartPage를 따로 호출해야 하기 때문에 제외. 
+            **/
+            if( routeName !== "WebviewPage"){
+                NativeModules.DotReactBridge.onStartPage();    
+            } 
     }
 
     _navigator.dispatch( 
