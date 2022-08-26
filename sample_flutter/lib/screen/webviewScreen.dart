@@ -37,6 +37,12 @@ class WebviewScreen extends StatelessWidget {
                 if( webData['method'] != null  ){ 
                   
                   switch(webData['method']){
+
+                    // setUser call 
+                    case "setUser":
+                    DOT.setUser(webData['data']); 
+                    break;  
+
                     // logEvent call 
                     case "logEvent" : 
                     DOT.logEvent(webData['data']);  

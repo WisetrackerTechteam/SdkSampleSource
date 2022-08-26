@@ -41,6 +41,12 @@ const WebviewPage = ({navigation}) => {
 			         		let webData = JSON.parse(event.nativeEvent.data);
 			         		if( webData.method ){
 								switch(webData.method){
+
+				                    // setUser call 
+				                    case "setUser": 
+				                    NativeModules.DotReactBridge.setUser(JSON.stringify(webData.data));  
+				                    break;     
+
 									// logEvent call 
 									case "logEvent" : 
 									NativeModules.DotReactBridge.logEvent(JSON.stringify(webData.data)); 	
