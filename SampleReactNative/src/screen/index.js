@@ -4,13 +4,16 @@ import MainScreen from './main';
 import ProductDetail from "./productView";
 import OrderCompleted from "./purchase";
 import EventPage from "./event";
+import WebviewPage from "./webview";
+
 
 const AuthStack = createStackNavigator(
     { 
         MainScreen: {screen: MainScreen},
         ProductDetail: {screen: ProductDetail},
         OrderCompleted: {screen: OrderCompleted},
-        EventPage: {screen: EventPage}
+        EventPage: {screen: EventPage},
+        WebviewPage: {screen: WebviewPage}
     },
     {
         initialRouteName: 'MainScreen'

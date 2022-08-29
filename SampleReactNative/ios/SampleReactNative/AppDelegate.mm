@@ -8,6 +8,7 @@
 #import <React/RCTConvert.h>
 #import <React/RCTAppSetupUtils.h>
 #import <RNCPushNotificationIOS.h>
+#import "DotReactBridge.h"
 
 #if RCT_NEW_ARCH_ENABLED
 #import <React/CoreModulesPlugins.h>
@@ -77,7 +78,8 @@
 - (NSArray<id<RCTBridgeModule>> *)extraModulesForBridge:(RCTBridge *)bridge
 {
   // If you'd like to export some custom RCTBridgeModules, add them here!
-  return @[];
+  DotReactBridge *dotReactBridge = [DotReactBridge alloc];
+  return @[dotReactBridge]; 
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge

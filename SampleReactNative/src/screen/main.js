@@ -131,6 +131,14 @@ const MainScreen = ({navigation}) => {
 	                })}
 			/> 
 
+ 			<Button title="웹뷰 페이지 이동" 
+					style={styles.actionBtn} 
+					onPress={()=> NavigationService.navigate('WebviewPage', {
+	                    screen: 'WebviewPage',
+	                    info: 'information'
+	                })}
+			/> 
+
 		</View>
 	);
 };   
