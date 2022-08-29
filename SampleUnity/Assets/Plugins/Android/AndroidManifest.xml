@@ -15,7 +15,8 @@
         
         <!--  예시는 wisetracker://wisetracker.co.kr 링크로 진입시 딥링크 분석이 가능 -->
         <activity android:name="com.sdk.wisetracker.unity.DeepLinkActivity"
-                  android:launchMode="singleTop" >
+                  android:launchMode="singleTop"
+                  android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
